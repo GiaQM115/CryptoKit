@@ -1,9 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+ * discrete log solver
+ * author:	Gianna Mule
+ * date:	2/1/18
+ * to use, provide the b, n, and m such that b^x = n mod m
+ */
+
 int main(int argc, char** argv) {
 	if(argc != 4) {
-		printf("USAGE: ./log b n m, such that 7^x = n mod b\n");
+		printf("USAGE: ./log a b n m, such that b^x = n mod n\n");
 		return EXIT_SUCCESS;
 	}
 	int b = strtol(argv[1],NULL,10);

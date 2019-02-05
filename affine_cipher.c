@@ -3,6 +3,15 @@
 #include <string.h>
 #include <stdbool.h>
 
+
+/*
+ * encrypter and decrypter for affine cipher (with given key)
+ * author:	Gianna Mule
+ * date:	2/2/18
+ * to use, enter a,b from the key, the plaintext or ciphertext, and e to encrypt or d to decrypt
+ */
+
+// find the inverse of a given integer n in the ring of integers to [0,z)
 int find_inverse(int n, int z) {
 	bool foundInverse = false;
 	for(int m = 2; m < z; m++) {
@@ -12,6 +21,8 @@ int find_inverse(int n, int z) {
 	}
 }
 
+// find the equivalent integer in the ring to the negative
+// necessary for modular arithmetic
 void change_neg(int* n) {
 	int fact = -1;
 	while(fact*26 >= *n) {

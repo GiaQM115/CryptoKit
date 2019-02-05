@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+/*
+ * multiplicative inverse finder for a given integer ring
+ * author:	Gianna Mule
+ * date:	2/1/18
+ * to use, provide n such that the given ring contains integers [0,n)
+ */
+
+// find the inverse of a number n in the ring that contains [0,z)
 int find_inverse(int n, int z) {
 	bool foundInverse = false;
 	for(int m = 2; m < z; m++) {
@@ -42,7 +50,6 @@ int main(int argc, char** argv) {
 			printf("%d has inverse %d\n",i,find_inverse(i,z));
 		}
 	}
-	
-	// find gcd; if gcd is 1, send to method that does what these loops do
 
+	return EXIT_SUCCESS;
 }
